@@ -1,0 +1,38 @@
+{
+  "name": "@showbie/backpack-react",
+  "description": "> TODO: description",
+  "license": "ISC",
+  "author": "Jeff <jeff@showbie.com>",
+  "homepage": "https://design.showbie.com",
+  "version": "0.0.0",
+  "main": "src/components/index.ts",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "storybook": "start-storybook",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@types/react": "^16.8.23"
+  },
+  "peerDependencies": {
+    "react": "16.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@showbie/eslint-config": "^0.3.4",
+    "@storybook/addon-actions": "^5.1.9",
+    "@storybook/addon-knobs": "^5.1.9",
+    "@storybook/react": "^5.1.9",
+    "babel-loader": "^8.0.6",
+    "eslint-plugin-typescript": "^0.14.0",
+    "react-dom": "^16.8.6",
+    "typescript-eslint-parser": "^22.0.0"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "singleQuote": true,
+    "trailingComma": "es5"
+  }
+}
