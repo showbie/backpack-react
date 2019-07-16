@@ -5,7 +5,7 @@
   "author": "Jeff <jeff@showbie.com>",
   "homepage": "https://design.showbie.com",
   "version": "0.0.0",
-  "main": "src/components/index.ts",
+  "main": "src/components/index.js",
   "files": [
     "src"
   ],
@@ -13,11 +13,8 @@
     "storybook": "start-storybook",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
-  "dependencies": {
-    "@types/react": "^16.8.23"
-  },
   "peerDependencies": {
-    "react": "16.8.6"
+    "react": "16.8.x"
   },
   "devDependencies": {
     "@babel/core": "^7.5.4",
@@ -26,9 +23,11 @@
     "@storybook/addon-knobs": "^5.1.9",
     "@storybook/react": "^5.1.9",
     "babel-loader": "^8.0.6",
-    "eslint-plugin-typescript": "^0.14.0",
+    "css-loader": "^3.0.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
     "react-dom": "^16.8.6",
-    "typescript-eslint-parser": "^22.0.0"
+    "sass-loader": "^7.1.0"
   },
   "prettier": {
     "arrowParens": "always",
