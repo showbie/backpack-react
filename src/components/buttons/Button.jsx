@@ -9,8 +9,8 @@ export default class Button extends React.Component {
   static propTypes = {
     children: PropTypes.node,
     a11yLabel: PropTypes.string,
-    type: PropTypes.oneOf('button', 'submit'),
-    appearance: PropTypes.oneOf('default', 'primary', 'text'),
+    type: PropTypes.oneOf(['button', 'submit']),
+    appearance: PropTypes.oneOf(['default', 'primary', 'text']),
     size: PropTypes.string,
     isDisabled: PropTypes.bool,
     isRunning: PropTypes.bool,
