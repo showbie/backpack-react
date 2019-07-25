@@ -1,9 +1,18 @@
 .button {
-  appearance: none;
+  padding: 12px 36px; // 1rem 3rem;
   border: 0;
   border-radius: 0.5rem;
   background-color: #b9bbbd;
   font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  line-height: 24px; // 2rem;
+  cursor: pointer;
+  appearance: none;
+
+  &[disabled] {
+    background-color: #f8f8f8;
+    color: rgba(7, 2, 20, 0.2);
+  }
 }
 
 .button--primary {
