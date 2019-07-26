@@ -2,14 +2,20 @@ import './ButtonGroup.scss';
 
 import React from 'react';
 
-// import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
+/**
+ * @todo Would be nice to be able to pass `appearance` to this
+ *       component and have that be applied to all `Button` children
+ *       automatically.
+ * @export
+ * @class ButtonGroup
+ * @extends React.Component
+ */
 export default class ButtonGroup extends React.Component {
   static propTypes = {
     children: PropTypes.node,
     orientation: PropTypes.oneOf(['horizontal', 'vertical']),
-    // appearance: PropTypes.oneOf(['default', 'primary', 'link']),
   };
 
   static defaultProps = {
@@ -19,14 +25,8 @@ export default class ButtonGroup extends React.Component {
   render() {
     let {
       children,
-      orientation,
-      // appearance,
+      // orientation,
     } = this.props;
-    // let buttonClass = classNames({
-    //   button: true,
-    //   'button--primary': appearance === 'primary',
-    //   'button--link': appearance === 'link',
-    // });
 
     return <div className="button-group">{children}</div>;
   }

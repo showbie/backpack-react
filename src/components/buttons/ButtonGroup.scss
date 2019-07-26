@@ -6,9 +6,12 @@
   font-size: 17px;
   font-weight: 500;
 
+  .button {
+    padding: 6px 12px; // 0.5rem 1rem;
+    border-radius: 0;
+  }
+
   > .button + .button {
-    margin-left: 1rem;
-    padding-left: 1rem;
-    border-left: 1px solid;
+    border-left: 1px solid rgba(7, 2, 20, 0.1);
   }
 }

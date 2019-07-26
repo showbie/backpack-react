@@ -30,5 +30,10 @@ storiesOf('Components|Buttons', module)
         <Button appearance="link">First</Button>
         <Button appearance="link">Second</Button>
       </ButtonGroup>
+      <ButtonGroup>
+        <Button appearance="link">Alpha</Button>
+        <Button appearance="link">Bravo</Button>
+        <Button appearance="link">Charlie</Button>
+      </ButtonGroup>
     </div>
   ));
