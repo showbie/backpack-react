@@ -12,7 +12,7 @@
   "scripts": {
     "lint:scripts": "prettier-eslint '**/*.{js,jsx}' --list-different",
     "lint:styles": "stylelint '**/*.scss'",
-    "storybook": "start-storybook"
+    "storybook": "start-storybook -p 9001"
   },
   "dependencies": {
     "classnames": "^2.2.6"
