@@ -1,0 +1,14 @@
+.button-group {
+  display: flex;
+  align-items: center;
+  color: #00a4c3;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+
+  > .button + .button {
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-left: 1px solid;
+  }
+}

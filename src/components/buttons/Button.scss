@@ -2,12 +2,15 @@
   padding: 12px 36px; // 1rem 3rem;
   border: 0;
   border-radius: 0.5rem;
-  background-color: #b9bbbd;
+  background-color: transparent;
+  color: #00a4c3;
   font-family: 'Montserrat', sans-serif;
   font-size: 17px;
+  font-weight: 500;
   line-height: 24px; // 2rem;
-  cursor: pointer;
   appearance: none;
+
+  &:not([disabled]) { cursor: pointer; }
 
   &[disabled] {
     background-color: #f8f8f8;
@@ -17,6 +20,13 @@
 
 .button--primary {
   background-color: #ebf9fc;
-  color: #00a4c3;
   font-weight: 700;
+}
+
+.button--link {
+  padding: 0;
+  background-color: transparent;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
 }

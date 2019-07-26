@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Button from './Button';
+import ButtonGroup from './ButtonGroup';
 
 storiesOf('Components|Buttons', module)
   .add('basic', () => (
@@ -15,10 +16,19 @@ storiesOf('Components|Buttons', module)
           Disabled
         </Button>
       </div>
+      <div>
+        <Button appearance="link">Link</Button>
+        <Button appearance="link" isDisabled={true}>
+          Disabled
+        </Button>
+      </div>
     </div>
   ))
   .add('grouped', () => (
-    <>
-      <Button appearance="text">Primary</Button>
-    </>
+    <div>
+      <ButtonGroup>
+        <Button appearance="link">First</Button>
+        <Button appearance="link">Second</Button>
+      </ButtonGroup>
+    </div>
   ));
