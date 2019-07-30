@@ -17,6 +17,12 @@ storiesOf('Components|Buttons', module)
         </Button>
       </div>
       <div>
+        <Button appearance="text">Text</Button>
+        <Button appearance="text" isDisabled={true}>
+          Disabled
+        </Button>
+      </div>
+      <div>
         <Button appearance="link">Link</Button>
         <Button appearance="link" isDisabled={true}>
           Disabled

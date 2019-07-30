@@ -10,7 +10,13 @@ export default class Button extends React.Component {
     children: PropTypes.node,
     a11yLabel: PropTypes.string,
     type: PropTypes.oneOf(['button', 'submit']),
-    appearance: PropTypes.oneOf(['default', 'primary', 'link']),
+    appearance: PropTypes.oneOf([
+      'default',
+      'primary',
+      'text',
+      'outline',
+      'link',
+    ]),
     size: PropTypes.string,
     isDisabled: PropTypes.bool,
     isRunning: PropTypes.bool,
@@ -36,6 +42,7 @@ export default class Button extends React.Component {
     let buttonClass = classNames({
       button: true,
       'button--primary': appearance === 'primary',
+      'button--text': appearance === 'text',
       'button--link': appearance === 'link',
     });
 

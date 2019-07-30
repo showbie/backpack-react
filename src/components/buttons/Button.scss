@@ -2,15 +2,22 @@
   padding: 12px 36px; // 1rem 3rem;
   border: 0;
   border-radius: 0.5rem;
-  background-color: transparent;
-  color: #00a4c3;
+  background-color: #ebfcff;
+  color: #0099c7;
   font-family: 'Montserrat', sans-serif;
   font-size: 17px;
   font-weight: 500;
   line-height: 24px; // 2rem;
   appearance: none;
 
-  &:not([disabled]) { cursor: pointer; }
+  &:not([disabled]) {
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: #d2f7ff;
+    }
+  }
 
   &[disabled] {
     background-color: #f8f8f8;
@@ -19,8 +26,19 @@
 }
 
 .button--primary {
-  background-color: #ebf9fc;
   font-weight: 700;
+}
+
+.button--text {
+  padding: 6px 12px; // 0.5rem 1rem;
+  background-color: transparent;
+
+  &[disabled] { background-color: transparent; }
+
+  &:not([disabled]) {
+    &:hover,
+    &:focus { color: #0078a3; }
+  }
 }
 
 .button--link {
