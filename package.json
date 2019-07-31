@@ -10,6 +10,7 @@
     "src"
   ],
   "scripts": {
+    "build:storybook": "build-storybook --config-dir .storybook --output-dir docs/storybook",
     "lint:scripts": "prettier-eslint '**/*.{js,jsx}' --list-different",
     "lint:styles": "stylelint '**/*.scss'",
     "storybook": "start-storybook -p 9001"
@@ -52,7 +53,7 @@
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "prettier-eslint --write",
+      "prettier-eslint --ignore docs/storybook/** --write",
       "git add"
     ],
     "*.scss": [
