@@ -52,8 +52,8 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": [
-      "prettier-eslint --ignore docs/storybook/** --write",
+    "!(docs/storybook)/**/*.{js,jsx}": [
+      "prettier-eslint --write",
       "git add"
     ],
     "*.scss": [
