@@ -1,22 +1,24 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import SelectableItem from './SelectableItem';
+// import React from 'react';
 
-storiesOf('Selectable Item', module).add('basic', () => (
-  <div>
-    <SelectableItem checked={true}>
-      <div>
-        <h4>
-          Select me senpai <SelectableItem.Checkbox />
-        </h4>
-      </div>
-    </SelectableItem>
+// import { storiesOf } from '@storybook/react';
 
-    <SelectableItem checked={false}>
-      <div>
-        <SelectableItem.Checkbox />
-        <h4>Select me senpai</h4>
-      </div>
-    </SelectableItem>
-  </div>
-));
+// import SelectableItem from './SelectableItem';
+
+// storiesOf('Selectable Item', module).add('basic', () => (
+//   <div>
+//     <SelectableItem checked={true}>
+//       <div>
+//         <h4>
+//           Select me senpai <SelectableItem.Checkbox />
+//         </h4>
+//       </div>
+//     </SelectableItem>
+
+//     <SelectableItem checked={false}>
+//       <div>
+//         <SelectableItem.Checkbox />
+//         <h4>Select me senpai</h4>
+//       </div>
+//     </SelectableItem>
+//   </div>
+// ));

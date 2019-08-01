@@ -18,6 +18,7 @@ export default class Button extends React.Component {
       'link',
     ]),
     size: PropTypes.string,
+    isDestructive: PropTypes.bool,
     isDisabled: PropTypes.bool,
     isRunning: PropTypes.bool,
     onClick: PropTypes.func,
@@ -35,15 +36,15 @@ export default class Button extends React.Component {
       type,
       appearance,
       // size,
+      isDestructive,
       isDisabled,
       // isRunning,
       // onClick,
     } = this.props;
     let buttonClass = classNames({
       button: true,
-      'button--primary': appearance === 'primary',
-      'button--text': appearance === 'text',
-      'button--link': appearance === 'link',
+      [`button--${appearance}`]: appearance !== 'default',
+      'is-destructive': isDestructive,
     });
 
     return (

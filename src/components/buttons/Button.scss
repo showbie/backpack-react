@@ -37,7 +37,10 @@
 
   &:not([disabled]) {
     &:hover,
-    &:focus { color: #0078a3; }
+    &:focus {
+      background-color: transparent;
+      color: #0078a3;
+    }
   }
 }
 
@@ -47,4 +50,14 @@
   font-family: inherit;
   font-weight: inherit;
   line-height: inherit;
+
+  &[disabled] { background-color: transparent; }
+
+  &:not([disabled]) {
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      color: #0078a3;
+    }
+  }
 }
