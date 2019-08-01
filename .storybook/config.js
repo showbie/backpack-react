@@ -1,9 +1,19 @@
 import { withA11y } from '@storybook/addon-a11y';
 // import { DocsPage } from '@storybook/addon-docs/blocks';
 import { withInfo } from '@storybook/addon-info';
+import { create } from '@storybook/theming';
 import { addDecorator, addParameters, configure, load } from '@storybook/react';
 
-// addParameters({ docs: DocsPage });
+addParameters({
+  options: {
+    theme: create({
+      base: 'light',
+      brandTitle: 'Backpack',
+      gridCellSize: 12,
+    }),
+  },
+  // docs: DocsPage
+});
 
 /**
  * `withInfo` must be the first decorator.
