@@ -52,7 +52,7 @@
     }
   },
   "lint-staged": {
-    "!(docs/storybook)/**/*.{js,jsx}": [
+    "*.{js,jsx}": [
       "prettier-eslint --write",
       "git add"
     ],
