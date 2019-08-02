@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { withA11y } from '@storybook/addon-a11y';
-// import { DocsPage } from '@storybook/addon-docs/blocks';
+import { DocsPage } from '@storybook/addon-docs/blocks';
 import { withInfo } from '@storybook/addon-info';
 import { create } from '@storybook/theming';
 import { addDecorator, addParameters, configure, load } from '@storybook/react';
@@ -15,7 +15,7 @@ addParameters({
     }),
     sortStoriesByKind: true,
   },
-  // docs: DocsPage
+  docs: DocsPage,
 });
 
 /**
