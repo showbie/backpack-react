@@ -8,16 +8,16 @@ import ButtonGroup from './ButtonGroup';
 storiesOf('Button Group', module).add('example', () => (
   <>
     <div>
-      <ButtonGroup>
-        <Button appearance="text">First</Button>
-        <Button appearance="text">Second</Button>
+      <ButtonGroup appearance="text">
+        <Button>First</Button>
+        <Button>Second</Button>
       </ButtonGroup>
     </div>
     <div style={{ 'margin-top': '1rem' }}>
-      <ButtonGroup>
-        <Button appearance="text">Alpha</Button>
-        <Button appearance="text">Bravo</Button>
-        <Button appearance="text">Charlie</Button>
+      <ButtonGroup appearance="text">
+        <Button>Alpha</Button>
+        <Button>Bravo</Button>
+        <Button>Charlie</Button>
       </ButtonGroup>
     </div>
   </>
