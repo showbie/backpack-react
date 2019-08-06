@@ -11,13 +11,16 @@ storiesOf('Button', module)
         <Button a11yLabel="Helpful text">Button</Button>
       </div>
       <div style={{ 'margin-top': '1rem' }}>
-        <Button isDisabled={true}>Disabled</Button>
+        <Button isDisabled>Disabled</Button>
       </div>
       <div style={{ 'margin-top': '1rem' }}>
-        <Button isDestructive={true}>Destructive</Button>
+        <Button isHovered>Hovered</Button>
       </div>
       <div style={{ 'margin-top': '1rem' }}>
-        <Button isDestructive={true} isDisabled={true}>
+        <Button isDestructive>Destructive</Button>
+      </div>
+      <div style={{ 'margin-top': '1rem' }}>
+        <Button isDestructive isDisabled>
           Disabled
         </Button>
       </div>

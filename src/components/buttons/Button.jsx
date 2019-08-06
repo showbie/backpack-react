@@ -20,6 +20,7 @@ export default class Button extends React.Component {
     size: PropTypes.string,
     isDestructive: PropTypes.bool,
     isDisabled: PropTypes.bool,
+    isHovered: PropTypes.bool,
     isRunning: PropTypes.bool,
     onClick: PropTypes.func,
   };
@@ -38,6 +39,7 @@ export default class Button extends React.Component {
       // size,
       isDestructive,
       isDisabled,
+      isHovered,
       // isRunning,
       // onClick,
     } = this.props;
@@ -45,6 +47,7 @@ export default class Button extends React.Component {
       button: true,
       [`button--${appearance}`]: appearance !== 'default',
       'is-destructive': isDestructive,
+      'is-hovered': isHovered,
     });
 
     return (
