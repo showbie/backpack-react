@@ -4,6 +4,8 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
+import { appearanceOptions } from './Button';
+
 /**
  * @export
  * @class ButtonGroup
@@ -12,13 +14,7 @@ import PropTypes from 'prop-types';
 export default class ButtonGroup extends React.Component {
   static propTypes = {
     children: PropTypes.node,
-    appearance: PropTypes.oneOf([
-      'default',
-      'primary',
-      'text',
-      'outline',
-      'link',
-    ]),
+    appearance: PropTypes.oneOf(appearanceOptions),
     orientation: PropTypes.oneOf(['horizontal', 'vertical']),
   };
 

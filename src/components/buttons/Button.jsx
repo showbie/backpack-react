@@ -5,18 +5,20 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
+export const appearanceOptions = [
+  'default',
+  'primary',
+  'text',
+  'outline',
+  'link',
+];
+
 export default class Button extends React.Component {
   static propTypes = {
     children: PropTypes.node,
     a11yLabel: PropTypes.string,
     type: PropTypes.oneOf(['button', 'submit']),
-    appearance: PropTypes.oneOf([
-      'default',
-      'primary',
-      'text',
-      'outline',
-      'link',
-    ]),
+    appearance: PropTypes.oneOf(appearanceOptions),
     size: PropTypes.string,
     isDestructive: PropTypes.bool,
     isDisabled: PropTypes.bool,
