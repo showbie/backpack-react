@@ -1,9 +1,13 @@
 {
   "name": "@showbie/backpack-react",
-  "description": "> TODO: description",
+  "description": "React components for Showbie’s design system",
   "license": "ISC",
-  "author": "Jeff <jeff@showbie.com>",
+  "author": "Showbie (https://www.showbie.com)",
+  "maintainers": [
+    "Jeff Nelson @stormwarning (https://www.showbie.com)"
+  ],
   "homepage": "https://design.showbie.com",
+  "repository": "showbie/backpack-react",
   "version": "0.0.0",
   "main": "src/components/index.js",
   "files": [
