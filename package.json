@@ -9,14 +9,12 @@
   "homepage": "https://design.showbie.com",
   "repository": "showbie/backpack-react",
   "version": "0.0.1",
-  "main": "src/components/index.js",
-  "files": [
-    "src"
-  ],
+  "main": "dist/index.js",
   "scripts": {
     "build:storybook": "build-storybook --config-dir .storybook --output-dir docs/storybook",
     "lint:scripts": "prettier-eslint '**/*.{js,jsx}' --list-different",
     "lint:styles": "stylelint '**/*.scss'",
+    "prepare": "babel src -d dist",
     "storybook": "start-storybook -p 9001"
   },
   "dependencies": {
@@ -26,7 +24,11 @@
     "react": "16.8.x"
   },
   "devDependencies": {
+    "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
     "@showbie/eslint-config": "^0.3.4",
     "@showbie/stylelint-config": "^0.3.2",
     "@storybook/addon-a11y": "^5.2.0-beta.21",
