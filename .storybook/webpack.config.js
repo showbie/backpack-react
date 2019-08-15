@@ -8,6 +8,14 @@ module.exports = async ({ config, mode }) => {
 
   // Make whatever fine-grained changes you need
   config.module.rules.push({
+    test: /\.(tsx?)$/,
+    use: [
+      { loader: require.resolve('awesome-typescript-loader') },
+      { loader: require.resolve('react-docgen-typescript-loader') },
+    ],
+  });
+  config.resolve.extensions.push('.ts', '.tsx');
+  config.module.rules.push({
     test: /\.scss$/,
     use: ['style-loader', 'css-loader', 'sass-loader'],
     include: path.resolve(__dirname, '../'),

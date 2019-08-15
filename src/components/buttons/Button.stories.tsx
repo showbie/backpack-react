@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 import { storiesOf } from '@storybook/react';
 
@@ -10,16 +10,16 @@ storiesOf('Button', module)
       <div>
         <Button a11yLabel="Helpful text">Button</Button>
       </div>
-      <div style={{ 'margin-top': '1rem' }}>
+      <div style={{ marginTop: '1rem' }}>
         <Button isDisabled>Disabled</Button>
       </div>
-      <div style={{ 'margin-top': '1rem' }}>
+      <div style={{ marginTop: '1rem' }}>
         <Button isHovered>Hovered</Button>
       </div>
-      <div style={{ 'margin-top': '1rem' }}>
+      <div style={{ marginTop: '1rem' }}>
         <Button isDestructive>Destructive</Button>
       </div>
-      <div style={{ 'margin-top': '1rem' }}>
+      <div style={{ marginTop: '1rem' }}>
         <Button isDestructive isDisabled>
           Disabled
         </Button>
@@ -31,7 +31,7 @@ storiesOf('Button', module)
       <div>
         <Button appearance="primary">Primary</Button>
       </div>
-      <div style={{ 'margin-top': '1rem' }}>
+      <div style={{ marginTop: '1rem' }}>
         <Button appearance="primary" isDisabled={true}>
           Disabled
         </Button>
@@ -43,7 +43,7 @@ storiesOf('Button', module)
       <div>
         <Button appearance="text">Text</Button>
       </div>
-      <div style={{ 'margin-top': '1rem' }}>
+      <div style={{ marginTop: '1rem' }}>
         <Button appearance="text" isDisabled={true}>
           Disabled
         </Button>
@@ -55,7 +55,7 @@ storiesOf('Button', module)
       <div>
         <Button appearance="link">Link</Button>
       </div>
-      <div style={{ 'margin-top': '1rem' }}>
+      <div style={{ marginTop: '1rem' }}>
         <Button appearance="link" isDisabled={true}>
           Disabled
         </Button>
