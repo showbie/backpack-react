@@ -1,6 +1,10 @@
 module.exports = {
-  extends: ['@showbie', 'plugin:react/recommended'],
-  parser: 'babel-eslint',
+  extends: [
+    '@showbie',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+  ],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: { jsx: true },
   },

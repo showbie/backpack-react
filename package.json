@@ -11,8 +11,9 @@
   "version": "0.0.2",
   "main": "dist/index.js",
   "scripts": {
+    "build": "tsc",
     "build:storybook": "build-storybook --config-dir .storybook --output-dir docs/storybook",
-    "lint:scripts": "prettier-eslint '**/*.{js,jsx}' --list-different",
+    "lint:scripts": "prettier-eslint '**/*.{js,jsx,ts,tsx}' --list-different",
     "lint:styles": "stylelint '**/*.scss'",
     "prepare": "babel src -d dist",
     "storybook": "start-storybook -p 9001"
@@ -40,6 +41,11 @@
     "@storybook/addon-viewport": "^5.2.0-beta.21",
     "@storybook/react": "^5.2.0-beta.21",
     "@storybook/theming": "^5.2.0-beta.21",
+    "@types/classnames": "^2.2.9",
+    "@types/storybook__react": "^4.0.2",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "awesome-typescript-loader": "^5.2.1",
     "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.0.0",
@@ -49,9 +55,11 @@
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
+    "react-docgen-typescript-loader": "^3.1.1",
     "react-dom": "^16.8.6",
     "sass-loader": "^7.1.0",
-    "stylelint": "^10.1.0"
+    "stylelint": "^10.1.0",
+    "typescript": "^3.5.3"
   },
   "husky": {
     "hooks": {
@@ -59,7 +67,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": [
+    "*.{js,jsx,ts,tsx}": [
       "prettier-eslint --write",
       "git add"
     ],
