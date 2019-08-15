@@ -23,14 +23,7 @@ addParameters({
  */
 // addDecorator(withInfo({ inline: true }));
 addDecorator(withA11y);
-// addDecorator((story) => <div style={{ padding: '2rem' }}>{story()}</div>);
-
-// load(require.context('../src/components', true, /\.stories\.js$/), module);
-
-// function loadStories() {
-//   let req = require.context('../src/components', true, /\.stories\.tsx$/);
-//   req.keys().forEach((filename) => req(filename));
-// }
+addDecorator((story) => <div style={{ padding: '2rem' }}>{story()}</div>);
 
 configure(
   require.context('../src/components', true, /\.stories\.tsx$/),

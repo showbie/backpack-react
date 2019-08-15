@@ -10,7 +10,10 @@ module.exports = async ({ config, mode }) => {
   config.module.rules.push({
     test: /\.(tsx?)$/,
     use: [
-      { loader: require.resolve('awesome-typescript-loader') },
+      {
+        loader: require.resolve('awesome-typescript-loader'),
+        options: { configFileName: './.storybook/tsconfig.json' },
+      },
       { loader: require.resolve('react-docgen-typescript-loader') },
     ],
   });
