@@ -1,0 +1,23 @@
+$checkbox-fill:    #0099c7;
+$checkbox-outline: #d6d6da;
+$checkbox-check:   #fff;
+
+.ui-checkbox {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+
+  .checkbox__outline { fill: $checkbox-outline; }
+  .checkbox__fill { fill: transparent; }
+  .check { fill: transparent; }
+  .cross { fill: transparent; }
+
+  &.is-disabled {
+    .checkbox__background { fill-opacity: 0.5; }
+  }
+
+  &.is-checked {
+    .checkbox__fill { fill: $checkbox-fill; }
+    .check { fill: $checkbox-check; }
+  }
+}
