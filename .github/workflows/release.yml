@@ -1,0 +1,17 @@
+on:
+  release:
+    types: [published]
+
+jobs:
+  notification:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Tokens package
+        uses: stormwarning/action-release-notification@v1
+        if: startsWith(github.ref, 'refs/tags/@showbie/backpack-tokens')
+        with:
+          channel: design
+          message: A new version is out!
+          actions: '[{"text": "View changelog 🎉", "url": "https://github.com/showbie/backpack/blob/master/packages/backpack-tokens/CHANGELOG.md"},{"text": "View docs 📚", "url": "https://design.showbie.com/"}]'
+        env:
+          SLACKBOT_TOKEN: ${{ secrets.SLACKBOT_TOKEN }}
