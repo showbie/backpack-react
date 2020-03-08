@@ -11,16 +11,16 @@ jobs:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "$GITHUB_CONTEXT"
       - name: Get latest version
+        id: latest
         run: |
-          VER=$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[",]//g' | tr -d '[[:space:]]')
-          echo ::set-env name=PKGVER::$(echo $VER)
+          echo "::set-output name=pkgver::$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[",]//g' | tr -d '[[:space:]]')"
       - name: Tokens package
         uses: stormwarning/action-release-notification@v2.1.0
         if: startsWith(github.ref, 'refs/tags/@showbie/backpack-tokens')
         with:
           channel: botpark
           message: A new version of *@showbie/backpack-tokens* was just released!
-          context: 🔖 ${{ env.PKGVER }}
+          context: 🔖 ${{ steps.yarn-cache.outputs.dir }}
           actions: '[{"text": "View changelog 🎉", "url": "https://github.com/showbie/backpack/blob/master/packages/backpack-tokens/CHANGELOG.md"},{"text": "View docs 📚", "url": "https://design.showbie.com/"}]'
         env:
           SLACKBOT_TOKEN: ${{ secrets.SLACKBOT_TOKEN }}
