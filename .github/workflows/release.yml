@@ -10,10 +10,11 @@ jobs:
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "$GITHUB_CONTEXT"
-      - name: Get latest version
-        id: latest
+      - name: List dir contents
         working-directory: ${{ github.workspace }}
         run: ls -la
+      - name: Get latest version
+        id: latest
         run: |
           echo "::set-output name=pkgver::$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[",]//g' | tr -d '[[:space:]]')"
       - name: Tokens package
