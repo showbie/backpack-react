@@ -13,8 +13,8 @@ jobs:
       - name: Get latest version
         id: latest
         working-directory: ${{ github.workspace }}
+        run: ls -la
         run: |
-          ls -la
           echo "::set-output name=pkgver::$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[",]//g' | tr -d '[[:space:]]')"
       - name: Tokens package
         uses: stormwarning/action-release-notification@v2.1.0
