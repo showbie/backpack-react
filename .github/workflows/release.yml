@@ -6,20 +6,8 @@ jobs:
   notification:
     runs-on: ubuntu-latest
     steps:
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
-      - name: List dir contents
-        working-directory: ./
-        run: ls -la
-      - name: Get latest version
-        id: latest
-        working-directory: ./
-        run: |
-          echo "::set-output name=pkgver::$(cat ./package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[",]//g' | tr -d '[[:space:]]')"
       - name: Tokens package
-        uses: stormwarning/action-release-notification@v2.1.0
+        uses: stormwarning/action-release-notification@v3.1.0
         if: startsWith(github.ref, 'refs/tags/@showbie/backpack-tokens')
         with:
           channel: botpark
